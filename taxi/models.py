@@ -14,12 +14,12 @@ class Car(models.Model):
     manufacturer = models.ForeignKey(
         Manufacturer,
         on_delete=models.CASCADE,
-        related_name='cars'
+        related_name='manufacturers'
     )
     driver = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
-        related_name='drivers'
+        related_name='cars'
     )
 
 class Driver(AbstractUser):
